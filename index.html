@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <!-- Google Fonts Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <h1>To Do Tasks</h1>
+      </div>
+      <!-- Dark - Light Mode Toggler -->
+      <button id="theme_toggler">
+        <span class="material-symbols-outlined"> settings_night_sight </span>
+      </button>
+    </header>
+
+    <!-- Main -->
+    <main id="main">
+      <div class="container">
+        <!-- TODO Input Form -->
+        <form id="todo_input_form">
+          <input id="todo_input" type="text" placeholder="Type your task..." />
+          <button onclick="addTodo(event)">
+            <span class="material-symbols-outlined">add</span>
+          </button>
+        </form>
+
+        <!-- TODO Tasks Container -->
+        <div id="todo_tasks_container">
+          
+        </div>
+
+        <!-- Modals -->
+        <div id="modals_container">
+          <!-- Edit Modal -->
+          <div id="edit_modal" class="modal">
+            <h3>Edit task</h3>
+            <form id="edit_input_form">
+              <input type="text" id="edit_input" placeholder="Edit TODO" />
+              <div class="buttons_group">
+                <button onclick="updateTask(event)">Update</button>
+                <button onclick="cancelOperation(event)">Cancel</button>
+              </div>
+            </form>
+          </div>
+          <!-- Delete Modal -->
+          <div id="delete_modal" class="modal">
+            <h3>
+              Are you sure to delete the task? This action CANNOT be UNDONE!
+            </h3>
+            <div class="buttons_group">
+              <button
+                onclick="deleteTask()"
+                style="background-color: rgb(255, 35, 196)"
+              >
+                YES
+              </button>
+              <button onclick="cancelOperation(event)">NO</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <p>
+          Copyright 2023 &copy;
+          <a href="https://github.com/nimisha-singh20" target="_blank"
+            >Nimisha Singh</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>
